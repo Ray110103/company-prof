@@ -71,7 +71,6 @@ const Products = () => {
         </div>
       </div>
 
-      {/* ✅ Centered Button */}
       <div className="flex justify-center">
         <Link href="/products">
           <Button className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-2 text-sm rounded-md">

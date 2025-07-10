@@ -7,7 +7,7 @@ const CompanyOverview = () => {
         {/* Image Section */}
         <div className="w-full lg:w-1/2">
           <img
-            src="/cleaning-service.jpeg" // ensure the image is in public/
+            src="/cleaning-service.jpeg" 
             alt="Our cleaning team in action"
             width={600}
             height={400}

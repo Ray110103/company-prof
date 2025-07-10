@@ -53,7 +53,7 @@ const AboutUs = () => {
         {/* Team Image */}
         <div className="w-full flex justify-center pt-8">
           <img
-            src="/team.jpg" // make sure it's inside /public
+            src="/team.jpg" 
             alt="Our Cleaning Team"
             width={700}
             height={450}

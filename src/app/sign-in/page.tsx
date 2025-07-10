@@ -92,7 +92,7 @@ const SignIn = () => {
           </Form>
         </Formik>
         <p className="text-sm text-center text-muted-foreground">
-          Don’t have an account yet?{" "}
+          Don't have an account yet?{" "}
           <a
             href="/sign-up"
             className="text-sky-700 hover:text-sky-900 font-medium transition-colors"
