@@ -4,8 +4,8 @@ import React from "react";
 
 const Products = () => {
   return (
-    <section className="bg-sky-50 py-16 px-6 md:px-12 lg:px-24">
-      <div className="text-center mb-12 ">
+    <section className="container mx-auto px-4 py-16 px-6 md:px-12 lg:px-24">
+      <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-sky-800">
           Our Cleaning Services
         </h2>
@@ -15,7 +15,8 @@ const Products = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Service Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
         {/* House Cleaning */}
         <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
           <img
@@ -68,14 +69,15 @@ const Products = () => {
             Deep steam cleaning for upholstery and rugs using safe chemicals.
           </p>
         </div>
+      </div>
 
-        <div className="mt-2 ">
-          <Link href="/services">
-            <Button className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-2 text-sm rounded-md ">
-              More Services
-            </Button>
-          </Link>
-        </div>
+      {/* ✅ Centered Button */}
+      <div className="flex justify-center">
+        <Link href="/products">
+          <Button className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-2 text-sm rounded-md">
+            More Services
+          </Button>
+        </Link>
       </div>
     </section>
   );

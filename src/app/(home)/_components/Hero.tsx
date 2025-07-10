@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-r from-white via-sky-50 to-sky-100 py-16 px-3 md:px-12 lg:px-24 flex flex-col-reverse lg:flex-row items-center gap-10">
+    <section className="container mx-auto px-4  from-white via-sky-50 to-sky-100 py-16 px-3 md:px-12 lg:px-24 flex flex-col-reverse lg:flex-row items-center gap-10">
       <div className="text-center lg:text-left max-w-xl">
         <h1 className="text-4xl font-extrabold text-sky-800 leading-tight">
           Sparkling Clean Homes & Offices

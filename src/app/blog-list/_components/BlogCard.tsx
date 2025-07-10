@@ -13,7 +13,7 @@ const BlogCard: FC<BlogCardProps> = ({ blog }) => {
     <Link href={`/blogs/${blog.objectId}`}>
       <Card>
         <CardHeader>
-          <div className="relative w-full h-[200px] rounded-lg overflow-hidden">
+          <div className="relative w-full h-[200px] rounded-lg overflow-hidden ">
             <Image
               src={blog.thumbnail}
               alt="thumbnail"
@@ -23,8 +23,8 @@ const BlogCard: FC<BlogCardProps> = ({ blog }) => {
           </div>
         </CardHeader>
         <CardContent>
-          <h2 className="font-bold text-lg">{blog.title}</h2>
-          <p className="line-clamp-3">{blog.description}</p>
+          <h2 className="font-bold text-lg text-sky-800">{blog.title}</h2>
+          <p className="line-clamp-3 text-sky-800">{blog.description}</p>
         </CardContent>
       </Card>
     </Link>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonials = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-24">
+    <section className="container mx-auto px-4 bg-white py-16 px-6 md:px-12 lg:px-24">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-sky-800">
           What Our Clients Say
@@ -15,7 +15,7 @@ const Testimonials = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Testimonial 1 */}
-        <div className="bg-sky-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+        <div className=" p-6 rounded-lg shadow-sm hover:shadow-md transition">
           <p className="text-sky-700 mb-4 italic">
             “CleanGo did an amazing job on our apartment. Everything smells
             fresh and looks spotless. Highly recommend!”
@@ -36,7 +36,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial 2 */}
-        <div className="bg-sky-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+        <div className=" p-6 rounded-lg shadow-sm hover:shadow-md transition">
           <p className="text-sky-700 mb-4 italic">
             “Our office looks brand new every week thanks to CleanGo. Their team
             is professional and always on time.”
@@ -57,7 +57,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial 3 */}
-        <div className="bg-sky-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+        <div className=" p-6 rounded-lg shadow-sm hover:shadow-md transition">
           <p className="text-sky-700 mb-4 italic">
             “They cleaned our carpets and windows perfectly. Friendly service
             and affordable prices.”
@@ -78,7 +78,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial 4 */}
-        <div className="bg-sky-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+        <div className=" p-6 rounded-lg shadow-sm hover:shadow-md transition">
           <p className="text-sky-700 mb-4 italic">
             “We've tried other services but CleanGo is by far the most reliable
             and detail-oriented.”
@@ -99,7 +99,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial 5 */}
-        <div className="bg-sky-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+        <div className=" p-6 rounded-lg shadow-sm hover:shadow-md transition">
           <p className="text-sky-700 mb-4 italic">
             “Having kids means messes everywhere—CleanGo saves my sanity every
             week!”
@@ -120,7 +120,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial 6 */}
-        <div className="bg-sky-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+        <div className=" p-6 rounded-lg shadow-sm hover:shadow-md transition">
           <p className="text-sky-700 mb-4 italic">
             “They come on time, clean thoroughly, and are super polite. Never
             switching!”

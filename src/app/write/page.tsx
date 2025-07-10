@@ -12,6 +12,10 @@ import { ChangeEvent, useState } from "react";
 import * as Yup from "yup";
 import useCreateBlog from "./_hooks/useCreateBlog";
 import { AuthGuard } from "@/hoc/AuthGuard";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "700"] });
+
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required("Title is required"),
@@ -29,16 +33,13 @@ const Write = () => {
     setFieldValue: (field: string, value: any) => void
   ) => {
     const files = e.target.files;
-
     if (files && files.length) {
       setSelectedImage(URL.createObjectURL(files[0]));
       setFieldValue("thumbnail", files[0]);
     }
   };
 
-  const removeThumbnail = (
-    setFieldValue: (field: string, value: any) => void
-  ) => {
+  const removeThumbnail = (setFieldValue: (field: string, value: any) => void) => {
     setSelectedImage("");
     setFieldValue("thumbnail", null);
   };
@@ -46,23 +47,25 @@ const Write = () => {
   const { mutateAsync: createBlog, isPending } = useCreateBlog();
 
   return (
-    <main className="container mx-auto px-4 pb-20 py-8 ">
-      <Formik
-        initialValues={{
-          title: "",
-          description: "",
-          content: "",
-          category: "",
-          thumbnail: null,
-        }}
-        validationSchema={validationSchema}
-        onSubmit={async (values) => {
-          await createBlog(values);
-        }}
-      >
-        {({ setFieldValue }) => (
-          <Form className="space-y-4">
-            <div className="flex flex-col gap-6">
+    <main className={`container mx-auto px-4 pb-20 pt-16 text-sky-900 ${montserrat.className}`}>
+      <section className="max-w-3xl mx-auto bg-white shadow-sm border border-sky-100 rounded-lg p-6 md:p-10 space-y-6">
+        <h1 className="text-3xl font-bold text-sky-800 mb-4 text-center">Write a New Blog</h1>
+
+        <Formik
+          initialValues={{
+            title: "",
+            description: "",
+            content: "",
+            category: "",
+            thumbnail: null,
+          }}
+          validationSchema={validationSchema}
+          onSubmit={async (values) => {
+            await createBlog(values);
+          }}
+        >
+          {({ setFieldValue }) => (
+            <Form className="space-y-6">
               {/* TITLE */}
               <div className="grid gap-2">
                 <Label htmlFor="title">Title</Label>
@@ -101,7 +104,7 @@ const Write = () => {
                 <Field
                   name="description"
                   as={Textarea}
-                  placeholder="Description"
+                  placeholder="Short summary..."
                   style={{ resize: "none" }}
                 />
                 <ErrorMessage
@@ -122,14 +125,14 @@ const Write = () => {
                     alt="thumbnail"
                     width={300}
                     height={250}
-                    className="object-cover"
+                    className="rounded-md object-cover border shadow"
                   />
                   <Button
                     size="icon"
                     className="absolute -top-2 -right-2 rounded-full bg-red-500"
                     onClick={() => removeThumbnail(setFieldValue)}
                   >
-                    <Trash />
+                    <Trash className="text-white" />
                   </Button>
                 </div>
               ) : (
@@ -148,16 +151,16 @@ const Write = () => {
                   />
                 </div>
               )}
-            </div>
 
-            <div className="flex justify-end ">
-              <Button type="submit" disabled={isPending}>
-                {isPending ? "Loading" : "Submit"}
-              </Button>
-            </div>
-          </Form>
-        )}
-      </Formik>
+              <div className="flex justify-end">
+                <Button type="submit" className="bg-sky-600 hover:bg-sky-700 text-white" disabled={isPending}>
+                  {isPending ? "Loading..." : "Submit"}
+                </Button>
+              </div>
+            </Form>
+          )}
+        </Formik>
+      </section>
     </main>
   );
 };

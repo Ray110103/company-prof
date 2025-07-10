@@ -10,8 +10,10 @@ const BlogBody: FC<BlogBodyProps> = async ({ objectId }) => {
   const blog = await getBlog(objectId);
 
   return (
-    <section className="mt-8">
-      <Markdown content={blog.content} />
+    <section className="mt-10 px-4 md:px-8 lg:px-16">
+      <div className="max-w-3xl mx-auto prose prose-sky prose-img:rounded-lg prose-headings:text-sky-800 prose-p:text-sky-700 prose-a:text-sky-600">
+        <Markdown content={blog.content} />
+      </div>
     </section>
   );
 };
